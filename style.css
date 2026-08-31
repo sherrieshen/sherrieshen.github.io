@@ -1,0 +1,213 @@
+:root {
+  --bg: #FFFAF3;
+  --ink: #2B241D;
+  --ink-soft: #6E6252;
+  --accent: #990000;
+
+  --font-display: "Noto Serif", serif;
+  --font-body: "Duru Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-links: "Inconsolata", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Paper background */
+
+.paper {
+  min-height: 100vh;
+}
+
+/* Layout */
+
+.page {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 13vh 28px 12vh;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 16vw 22px 14vw;
+  }
+}
+
+/* Marginalia grid: label column + content column, used for every
+   section including the header, so the name lines up with body text
+   and the label column reads as reserved space. */
+
+.row {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  column-gap: 36px;
+}
+
+.row + .row {
+  margin-top: 70px;
+}
+
+.header-row {
+  margin-bottom: 6px;
+}
+
+.margin-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+  padding-top: 0.15em;
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+
+  .margin-label:empty {
+    display: none;
+  }
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0 0 8px;
+  letter-spacing: -0.005em;
+}
+
+.title {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.94rem;
+}
+
+.row-content p {
+  margin: 0;
+  max-width: 52ch;
+  font-size: 0.8rem;
+}
+
+.row-content em {
+  font-style: italic;
+}
+
+/* Contact */
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-list li {
+  font-family: var(--font-links);
+  font-size: 0.75rem;
+  color: var(--accent);
+  margin-top: 1.8px;
+}
+
+/* Publications */
+
+.pub-year {
+  font-family: var(--font-body);
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  margin: 0 0 12px;
+  margin-top: 1.8px;
+}
+
+.row-content .pub-year:not(:first-child) {
+  margin-top: 20px;
+}
+
+.pub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pub {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 0;
+}
+
+.pub-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+
+.pub-title sup {
+  font-size: 0.62em;
+}
+
+.pub-authors,
+.pub-venue {
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+}
+
+.pub-award {
+  color: var(--accent);
+  font-size: 0.75rem;
+  margin-top: 5px;
+}
+
+.pub-links {
+  font-family: var(--font-links);
+  font-size: 0.75rem;
+  margin-top: 5px;
+}
+
+/* Links */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+a:hover,
+a:focus-visible {
+  border-bottom-color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-bottom-color: transparent;
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  a {
+    transition: none;
+  }
+}

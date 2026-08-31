@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Browser tab title — set separately since it has to exist
+       before the page's scripts run. Keep this in sync with the
+       `name` value in content.js. -->
+  <title>Sherrie Shen</title>
+  <meta name="description" content="">
+  <meta name="robots" content="noai">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,500;0,600;1,500&family=Duru+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="paper">
+    <main class="page">
+
+      <!-- Everything below is filled in by content.js — see that file
+           to edit your name, bio, contact links, and publications. -->
+
+      <section class="row header-row">
+        <div class="margin-label"></div>
+        <div class="row-content">
+          <h1 class="name" id="name"></h1>
+        </div>
+      </section>
+
+      <section class="row">
+        <div class="margin-label">about</div>
+        <div class="row-content">
+          <p id="about"></p>
+        </div>
+      </section>
+
+      <section class="row">
+        <div class="margin-label">publications</div>
+        <div class="row-content" id="publications"></div>
+      </section>
+
+      <section class="row">
+        <div class="margin-label">contact</div>
+        <div class="row-content">
+          <ul class="contact-list" id="contact"></ul>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="content.js"></script>
+</body>
+</html>
