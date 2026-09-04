@@ -14,7 +14,8 @@ const about = `
   advised by <a href='https://robinjia.github.io/'>Robin Jia</a>. 
   I previously studied at the University of Edinburgh, where I was a member of the 
   <a href='https://www.wiki.ed.ac.uk/spaces/statmt/pages/394675357/People'>machine translation group</a>.
-  My research interests center around AI governance and societal impact.`;
+  I care about the societal implications of AI, and I'm interested in understanding related law
+  to write effective policy.`;
 
 
 // ------------------------------------------------------------
